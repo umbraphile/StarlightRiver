@@ -144,24 +144,6 @@ namespace StarlightRiver.Content.CustomHooks
             {
                 Point16 targetPoint = Main.SmartCursorEnabled ? new Point16(Main.SmartCursorX, Main.SmartCursorY) : new Point16(Player.tileTargetX, Player.tileTargetY);
 
-                Tile tile = Framing.GetTileSafely(targetPoint.X, targetPoint.Y);
-
-                if (tile?.wall == WallType<AuroraBrickWall>())
-                {
-                    for (int k = 0; k < Main.maxProjectiles; k++) //this is gross. Unfortunate.
-                    {
-                        Projectile proj = Main.projectile[k];
-
-                        if (proj.active && proj.timeLeft > 10 && proj.modProjectile is InteractiveProjectile && (proj.modProjectile as InteractiveProjectile).CheckPoint(targetPoint.X, targetPoint.Y))
-                        {
-                            return base.CanUseItem(item, player);
-                        }
-                    }
-                    player.AddBuff(BuffID.Cursed, 10, false);
-                    FailFX(targetPoint);
-                    return false;
-                }
-
                 if (IsProtected(targetPoint.X, targetPoint.Y))
                 {
                     player.AddBuff(BuffID.Cursed, 10, false);
