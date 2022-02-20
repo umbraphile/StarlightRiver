@@ -9,11 +9,19 @@ namespace StarlightRiver.Content.Abilities
     {
         public static bool CheckDash(Player player, Rectangle hitbox)
         {
-            if (!player.active) return false;
+            if (!player.active) 
+                return false;
             return player.ActiveAbility<Dash>() && Collision.CheckAABBvAABBCollision(player.Hitbox.TopLeft(), player.Hitbox.Size(), hitbox.TopLeft(), hitbox.Size());
         }
 
-        public static bool UsingAnyAbility(this Player player) => player.GetHandler().ActiveAbility != null;
+
+
+        public static bool UsingAnyAbility(this Player player)
+        {
+            if (!player.active)
+                return false;
+            return player.GetHandler().ActiveAbility != null;
+        }
 
         public static bool ActiveAbility<T>(this Player player) where T : Ability => player.GetHandler().ActiveAbility is T;
 
