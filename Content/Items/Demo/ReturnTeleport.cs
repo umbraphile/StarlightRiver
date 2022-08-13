@@ -18,7 +18,7 @@ namespace StarlightRiver.Content.Items.Demo
 {
 	internal class ReturnTeleport : ModItem
 	{
-		public override string Texture => AssetDirectory.Debug;
+		public override string Texture => "StarlightRiver/Assets/Items/Demo/" + Name;
 
 		public override void SetDefaults()
 		{

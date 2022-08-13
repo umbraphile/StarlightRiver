@@ -18,12 +18,13 @@ using StarlightRiver.Content.Items.Permafrost;
 using StarlightRiver.Content.Items.Moonstone;
 using StarlightRiver.Content.Items.Dungeon;
 using StarlightRiver.Content.Items.SteampunkSet;
+using StarlightRiver.Content.Items.Vitric;
 
 namespace StarlightRiver.Content.Items.Demo
 {
 	internal class CeirosTeleport : ModItem
 	{
-		public override string Texture => AssetDirectory.Debug;
+		public override string Texture => "StarlightRiver/Assets/Items/Demo/" + Name;
 
 		public override void SetDefaults()
 		{
@@ -80,7 +81,11 @@ namespace StarlightRiver.Content.Items.Demo
 						i.SetDefaults(ModContent.ItemType<MagmaGun>());
 						break;
 
-					case 7:
+					case 8:
+						i.SetDefaults(ModContent.ItemType<GlassIdolEndless>());
+						break;
+
+					case 9:
 						i.SetDefaults(ModContent.ItemType<ReturnTeleport>());
 						break;
 

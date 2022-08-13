@@ -13,12 +13,13 @@ using StarlightRiver.Content.Items.Gravedigger;
 using StarlightRiver.Content.Abilities;
 using StarlightRiver.Content.Items.UndergroundTemple;
 using StarlightRiver.Content.Items.Beach;
+using StarlightRiver.Content.Items.Permafrost;
 
 namespace StarlightRiver.Content.Items.Demo
 {
 	internal class AuroracleTeleport : ModItem
 	{
-		public override string Texture => AssetDirectory.Debug;
+		public override string Texture => "StarlightRiver/Assets/Items/Demo/" + Name;
 
 		public override void SetDefaults()
 		{
@@ -36,8 +37,8 @@ namespace StarlightRiver.Content.Items.Demo
 
 			var newInv = new Item[player.inventory.Length];
 
-			player.statLifeMax = 400;
-			player.statManaMax = 200;
+			player.statLifeMax = 300;
+			player.statManaMax = 140;
 			player.GetModPlayer<AbilityHandler>().unlockedAbilities.Clear();
 
 			for (int k = 0; k < player.inventory.Length; k++)
@@ -73,6 +74,10 @@ namespace StarlightRiver.Content.Items.Demo
 					case 6:
 						i.SetDefaults(ItemID.DirtBlock);
 						i.stack = 999;
+						break;
+
+					case 8:
+						i.SetDefaults(ModContent.ItemType<SquidBossSpawnEndless>());
 						break;
 
 					case 9:
