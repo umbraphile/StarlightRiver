@@ -51,7 +51,11 @@ namespace StarlightRiver.Content.Items.Misc
                 if (dust.active && dust.type == DustType && dust.customData != null)
                 {
                     borderNoise.Parameters["offset"].SetValue((float)dust.rotation);
-                    spriteBatch.Draw(tex, (dust.position - Main.screenPosition) / 2, null, Color.White, dust.rotation, tex.Size() / 2, dust.scale * new Vector2(1f, (float)dust.customData + (0.25f * dust.velocity.Length())), SpriteEffects.None, 0);
+
+                    var prevPositions = (List<Vector2>)dust.customData;
+
+                    foreach (Vector2 pos in prevPositions)
+                        spriteBatch.Draw(tex, (pos - Main.screenPosition) / 2, null, Color.White, dust.rotation, tex.Size() / 2, dust.scale * new Vector2(1f, 1f), SpriteEffects.None, 0);
                 }
             }
 

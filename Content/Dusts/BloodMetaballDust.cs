@@ -31,16 +31,24 @@ namespace StarlightRiver.Content.Dusts
 
 		public override bool Update(Dust dust)
 		{
-			dust.position += dust.velocity;
+			float speed = 1.4f;
+			dust.position += dust.velocity * speed;
 
 			if (dust.customData == null)
-				dust.customData = Main.rand.NextFloat(0.75f, 1.5f);
+				dust.customData = new List<Vector2>();
+
+			var list = dust.customData as List<Vector2>;
+
+			list.Add(dust.position);
+
+			if (list.Count > 6)
+				list.RemoveAt(0);
 
 			if (dust.noGravity)
-				dust.velocity = new Vector2(0, -1f);
+				dust.velocity = new Vector2(0, -speed);
 			else
 			{
-				dust.velocity.Y += 0.2f;
+				dust.velocity.Y += 0.2f * speed;
 
 				if (dust.position.X > 16 && dust.position.Y > 16)
 				{
