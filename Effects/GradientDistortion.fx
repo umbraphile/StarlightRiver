@@ -33,16 +33,21 @@ float4 main(float2 uv : TEXCOORD0) : COLOR0
     uv += float2(0.5, 0.5);
 
     float strength = max(tex2D(uImage1, uv).r - tex2D(uImage1, uv).b, 0.0);
-    float progress = uTime / uProgress;
+    float progress = uTime / uProgress + uv.x * 4.0;
     float sinTime = (strength + progress) * uIntensity * 6.28;
 	float2 off = float2(sin(sinTime), sin(sinTime * 1.25168)) * 0.1 * (strength / 255.0) * uOpacity;
-    return tex2D(uImage0, coord + off);
+    float4 final = tex2D(uImage0, coord + off);
+    
+    final.r += tex2D(uImage0, coord) * strength * 1.5;
+    final.g += tex2D(uImage0, coord) * pow(strength * 0.5, 2.0) * 1.5;
+    
+    return final;
 }
 
 technique Technique1
 {
     pass GradientDistortionPass
     {
-        PixelShader = compile ps_2_0 main();
+        PixelShader = compile ps_3_0 main();
     }
 }

@@ -42,6 +42,10 @@ namespace StarlightRiver
 
 		public StarlightRiver()
 		{
+#if DEBUG
+			debugMode = true;
+#endif
+
 			Instance = this;
 			PreJITFilter = new TemporaryFix();
 		}

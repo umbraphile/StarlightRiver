@@ -45,12 +45,17 @@ namespace StarlightRiver.Content.Biomes
 						.UseIntensity(7f)
 						.UseProgress(6)
 						.UseImage(LightingBuffer.screenLightingTarget.RenderTarget, 0);
+					//.UseImage(ModContent.Request<Texture2D>("StarlightRiver/Assets/Noise/PerlinNoise").Value);
+
+					Main.NewText("Distortion on aaaaaaaaaaaaaaaaa");
 				}
 			}
 			else
 			{
 				if (Filters.Scene["GradientDistortion"].IsActive())
 					Filters.Scene.Deactivate("GradientDistortion");
+
+				Main.NewText("Distortion off");
 			}
 		}
 
@@ -58,6 +63,8 @@ namespace StarlightRiver.Content.Biomes
 		{
 			if (Filters.Scene["GradientDistortion"].IsActive())
 				Filters.Scene.Deactivate("GradientDistortion");
+
+			Main.NewText("Distortion off");
 		}
 
 		public override void OnEnter(Player player)
