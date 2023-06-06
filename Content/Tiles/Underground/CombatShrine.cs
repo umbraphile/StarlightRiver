@@ -32,6 +32,9 @@ namespace StarlightRiver.Content.Tiles.Underground
 
 		public override void MouseOver(int i, int j)
 		{
+			if (Framing.GetTileSafely(i, j).TileFrameX >= 6 * 18)
+				return;
+
 			Player Player = Main.LocalPlayer;
 			Player.cursorItemIconID = ModContent.ItemType<Items.Hovers.GenericHover>();
 			Player.noThrow = 2;
@@ -114,8 +117,8 @@ namespace StarlightRiver.Content.Tiles.Underground
 		const int ArenaOffsetY = -19;
 		const int ArenaSizeY = 26;
 
-		public Rectangle ArenaPlayer => new((ParentX + ArenaOffsetX) * 16, (ParentY + ArenaOffsetY) * 16, ArenaSizeX * 16, ArenaSizeY * 16);
-		public Rectangle ArenaTile => new(ParentX + ArenaOffsetX, ParentY + ArenaOffsetY, ArenaSizeX, ArenaSizeY);
+		public Rectangle ArenaZone => new((ParentX + ArenaOffsetX) * 16, (ParentY + ArenaOffsetY) * 16, ArenaSizeX * 16, ArenaSizeY * 16);
+		public Rectangle BuildProtection => new(ParentX + ArenaOffsetX, ParentY + ArenaOffsetY, ArenaSizeX, ArenaSizeY);
 
 		public CombatShrineDummy() : base(ModContent.TileType<CombatShrine>(), 3 * 16, 6 * 16) { }
 
@@ -140,7 +143,7 @@ namespace StarlightRiver.Content.Tiles.Underground
 
 			foreach (Player player in Main.player)
 			{
-				bool thisPlayerInRange = player.active && !player.dead && ArenaPlayer.Intersects(player.Hitbox);
+				bool thisPlayerInRange = player.active && !player.dead && ArenaZone.Intersects(player.Hitbox);
 
 				if (thisPlayerInRange && State != ShrineState_Idle)
 					player.GetModPlayer<ShrinePlayer>().CombatShrineActive = true;
@@ -148,16 +151,15 @@ namespace StarlightRiver.Content.Tiles.Underground
 				anyPlayerInRange = anyPlayerInRange || thisPlayerInRange;
 			}
 
+			//ProtectionWorld.AddRegionBySource(new Point16(ParentX, ParentY), BuildProtection);//stop calling this and call RemoveRegionBySource() when shrine is completed
+
 			if (State == ShrineState_Idle && Parent.TileFrameX >= 3 * 18)//if idle and frame isnt default (happens when entity is despawned while active)
 			{
 				SetFrame(0);
-				return;
 			}
 
 			if (State != ShrineState_Idle)//this does not need a defeated check because of the above one
 			{
-				ProtectionWorld.AddRegionBySource(new Point16(ParentX, ParentY), ArenaTile);//stop calling this and call RemoveRegionBySource() when shrine is completed
-
 				(Mod as StarlightRiver).useIntenseMusic = true;
 				Dust.NewDustPerfect(Projectile.Center + new Vector2(Main.rand.NextFloat(-24, 24), 28), ModContent.DustType<Dusts.Glow>(), Vector2.UnitY * -Main.rand.NextFloat(2), 0, new Color(255, 40 + Main.rand.Next(50), 75) * Windup, 0.2f);
 

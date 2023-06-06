@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using Terraria.DataStructures;
 using Terraria.ID;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace StarlightRiver.Content.Tiles.Underground
 {
@@ -29,6 +30,9 @@ namespace StarlightRiver.Content.Tiles.Underground
 
 		public override void MouseOver(int i, int j)
 		{
+			if (Framing.GetTileSafely(i, j).TileFrameX >= 10 * 18)
+				return;
+
 			Player Player = Main.LocalPlayer;
 			Player.cursorItemIconID = ModContent.ItemType<Items.Hovers.GenericHover>();
 			Player.noThrow = 2;
@@ -93,7 +97,7 @@ namespace StarlightRiver.Content.Tiles.Underground
 	internal partial class EvasionShrineDummy : Dummy, IDrawAdditive
 	{
 		public int maxAttacks = 15;
-		public int lives;
+		public int lives = 4;
 		public List<int> attackOrder;
 
 		public ref float Timer => ref Projectile.ai[0];
@@ -106,8 +110,8 @@ namespace StarlightRiver.Content.Tiles.Underground
 		const int ArenaOffsetY = -30;
 		const int ArenaSizeY = 49;
 
-		public Rectangle ArenaPlayer => new((ParentX + ArenaOffsetX) * 16, (ParentY + ArenaOffsetY) * 16, ArenaSizeX * 16, ArenaSizeY * 16);
-		public Rectangle ArenaTile => new(ParentX + ArenaOffsetX, ParentY + ArenaOffsetY, ArenaSizeX, ArenaSizeY);
+		public Rectangle ArenaZone => new((ParentX + ArenaOffsetX) * 16, (ParentY + ArenaOffsetY) * 16, ArenaSizeX * 16, ArenaSizeY * 16);
+		public Rectangle BuildProtection => new(ParentX + ArenaOffsetX, ParentY + ArenaOffsetY, ArenaSizeX, ArenaSizeY);
 
 		public EvasionShrineDummy() : base(ModContent.TileType<EvasionShrine>(), 5 * 16, 6 * 16) { }
 
@@ -132,7 +136,7 @@ namespace StarlightRiver.Content.Tiles.Underground
 
 			foreach (Player player in Main.player)
 			{
-				bool thisPlayerInRange = player.active && !player.dead && ArenaPlayer.Intersects(player.Hitbox);
+				bool thisPlayerInRange = player.active && !player.dead && ArenaZone.Intersects(player.Hitbox);
 
 				if (thisPlayerInRange && State != ShrineState_Idle)
 					player.GetModPlayer<ShrinePlayer>().EvasionShrineActive = true;
@@ -153,6 +157,8 @@ namespace StarlightRiver.Content.Tiles.Underground
 
 			Lighting.AddLight(Projectile.Center + new Vector2(0, -230), color);
 
+			ProtectionWorld.AddRegionBySource(new Point16(ParentX, ParentY), BuildProtection);//stop calling this and call RemoveRegionBySource() when shrine is completed
+
 			if (State == ShrineState_Idle && Parent.TileFrameX >= 5 * 18)//if idle and frame isnt default (happens when entity is despawned while active)
 			{
 				SetFrame(0);
@@ -161,8 +167,6 @@ namespace StarlightRiver.Content.Tiles.Underground
 
 			if (State != ShrineState_Idle)
 			{
-				ProtectionWorld.AddRegionBySource(new Point16(ParentX, ParentY), ArenaTile);//stop calling this and call RemoveRegionBySource() when shrine is completed
-
 				(Mod as StarlightRiver).useIntenseMusic = true;
 				Dust.NewDustPerfect(Projectile.Center + new Vector2(Main.rand.NextFloat(-24, 24), 28), ModContent.DustType<Dusts.Glow>(), Vector2.UnitY * -Main.rand.NextFloat(2), 0, new Color(150, 30, 205) * Windup, 0.2f);
 
