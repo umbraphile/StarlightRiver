@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using StarlightRiver.Content.Menus;
+using System.Collections.Generic;
 using System.Threading;
 
 namespace StarlightRiver.Core.Systems.ScreenTargetSystem
@@ -20,7 +21,6 @@ namespace StarlightRiver.Core.Systems.ScreenTargetSystem
 				Main.OnResolutionChanged += ResizeScreens;
 			}
 		}
-
 		new public void Unload()
 		{
 			if (!Main.dedServ)
@@ -67,7 +67,7 @@ namespace StarlightRiver.Core.Systems.ScreenTargetSystem
 
 		public static void ResizeScreens(Vector2 obj)
 		{
-			if (Main.gameMenu || Main.dedServ)
+			if (Main.dedServ || StarlightRiver.TESTVALUE)
 				return;
 
 			targetSem.WaitOne();
@@ -92,19 +92,18 @@ namespace StarlightRiver.Core.Systems.ScreenTargetSystem
 		private void RenderScreens(On_Main.orig_CheckMonoliths orig)
 		{
 			orig();
-
-			if (Main.gameMenu || Main.dedServ)
+			if (Main.dedServ || StarlightRiver.TESTVALUE)//loading
 				return;
 
 			RenderTargetBinding[] bindings = Main.graphics.GraphicsDevice.GetRenderTargets();
 
 			targetSem.WaitOne();
-
+			int a = 0;
 			foreach (ScreenTarget target in targets)
 			{
 				if (target.drawFunct is null) //allows for RTs which dont draw in the default loop, like the lighting tile buffers
 					continue;
-
+				a++;
 				Main.spriteBatch.Begin();
 				Main.graphics.GraphicsDevice.SetRenderTarget(target.RenderTarget);
 				Main.graphics.GraphicsDevice.Clear(Color.Transparent);

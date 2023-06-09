@@ -49,7 +49,6 @@ namespace StarlightRiver
 		public bool useIntenseMusic = false; //TODO: Make some sort of music handler at some point for this
 
 		private Vector2 lastScreenSize; //Putting these in StarlightRiver incase anything else wants to use them (which is likely)
-
 		public static void SetLoadingText(string text)
 		{
 			FieldInfo Interface_loadMods = typeof(Mod).Assembly.GetType("Terraria.ModLoader.UI.Interface")!.GetField("loadMods", BindingFlags.NonPublic | BindingFlags.Static)!;
