@@ -1,90 +1,90 @@
 Keybinds: {
-	Starsight.DisplayName: Starsight
-	"Forbidden Winds.DisplayName": Forbidden  Winds
-	Faeflame.DisplayName: Faeflame
+	Starsight.DisplayName: Звёздный взор
+	"Forbidden Winds.DisplayName": Запретные ветры
+	Faeflame.DisplayName: Заколдованное пламя
 }
 
 Items: {
 	GatheringWindsItem: {
-		DisplayName: Gathering Winds
+		DisplayName: Накопляемый порыв
 		Tooltip:
 			'''
-			Forbidden Winds Infusion
-			Hold the dash key to hover and charge up a dash
-			Charged dashes shatter enemy defense on contact
-			Drain 2 starlight/s while charging
-			Must spend atleast 1 starlight to activate
+			Усиление запретных ветров
+			Зажмите клавишу уклонения чтобы зависнуть в воздухе и зарядить рывок
+			Заряженные рывки разрушают броню врагов при столкновении
+			Тратит 2 света звёзд в секунду во время зарядки
+			Тратит 1 свет звёзд для активации
 			'''
 	}
 
 	StellarRushItem: {
-		DisplayName: Stellar Rush
+		DisplayName: Звёздный бросок
 		Tooltip:
 			'''
-			Forbidden Winds Infusion
-			Dash farther and carry more speed
-			Increases starlight cost to 1.5
+			Усиление запретных ветров
+			Увеличивает скорость рывка и его дистанцию
+			Увеличивает стоимость активации до 1.5 света звёзд
 			'''
 	}
 
 	WellspringItem: {
-		DisplayName: Wellspring
+		DisplayName: Родник
 		Tooltip:
 			'''
-			Starsight Infusion
-			Creates a restorative wellspring when using starsight on the air
-			Spend 2 starlight to do this
+			Усиление звёздного взора
+			Создаёт восстанавливающий родник при использовании звёздного взора на воздухе
+			Тратит 2 свет звёзд для активации
 			'''
 	}
 
 	BasicInfusion: {
-		DisplayName: Blank Slate
-		Tooltip: Used to create infusions
+		DisplayName: Чистый сланец
+		Tooltip: Используется для создания усилений
 	}
 
 	CauldronItem: {
-		Tooltip: Places an Alchemic Cauldron
-		DisplayName: Cauldron Item
+		Tooltip: Размещает алхимический котёл
+		DisplayName: Котёл
 	}
 
 	MixingStick: {
 		Tooltip:
 			'''
-			Mixing Stick
-			Use this to finalize alchemy recipes to craft them.
+			Палка для размешивания
+			Используйте для того чтобы закончить алхимический крафт
 			'''
-		DisplayName: Mixing Stick
+		DisplayName: Палка для размешивания
 	}
 
 	ArtilleryLicense: {
-		DisplayName: Artillery License
+		DisplayName: Лицензия на артиллерию
 		Tooltip:
 			'''
-			Increases your max number of sentries by 1
-			`Totally not forged`
+			Увеличивает число стражей на 1
+			`Точно не подделка`
 			'''
 	}
 
 	DefenseSystem: {
-		DisplayName: Arms Dealer's Defense System
+		DisplayName: Защитная система оружейника
 		Tooltip:
 			'''
-			Summons a gun-toting turret
-			Right click to cycle between different guns
-			[i/s1:95] Modest damage with good range
-			[i/s1:964] Great damage with short range
-			[i/s1:98] Light damage with great fire rate
+			Вызывает навороченную турель
+			Правая кнопка мыши меняет основное оружие турели
+			[i/s1:95] Средний урон с хорошей дальностью
+			[i/s1:964] Высокий урон с малой дальностью
+			[i/s1:98] Низкий урон с высокой дальностью
 
 			'''
 	}
 
 	MoonstoneBarrierDye: {
-		DisplayName: Moonstone Tincture
+		DisplayName: Настойка из лунного камня
 		Tooltip:
 			'''
-			Causes {{barrier}} to reflect the light of the moon
-			Equipable
-			Vanity Item
+			Заставляет {{Барьер}} отражать свет луны
+			Можно надеть
+			Предмет украшения
 			'''
 	}
 
@@ -92,350 +92,350 @@ Items: {
 		DisplayName: Sentinel's Tincture
 		Tooltip:
 			'''
-			Causes {{barrier}} to mimic the shield of the Shattered Sentinel
-			Equipable
-			Vanity Item
+			Заставляет {{барьер}} имитировать эффект щита Разбитого Стража
+			Можно надеть
+			Предмет украшения
 			'''
 	}
 
 	ExoticTimepiece: {
-		DisplayName: Exotic Timepiece
+		DisplayName: Экзотический часовой механизм
 		Tooltip:
 			'''
-			Your sentries fire faster and shock nearby enemies when placed
-			Your minions and sentries occasionally critically strike
-			200% increased sentry placement speed
-			'So complicated that you're not even sure how you built it'
+			Ваши стражи размещаются быстрее и накладывают Шок на врагов
+			Ваши миньоны и стражи периодически наносят критический урон
+			200% к увеличению скорости размещения стражей
+			'Настолько сложно, что вы даже не представляете, как его собрали'
 			'''
 	}
 
 	SaltCogs: {
-		DisplayName: Salt Cogs
+		DisplayName: Шестерни из соли
 		Tooltip:
 			'''
-			Your sentries fire twice as fast for two seconds after being placed
-			100% increased sentry placement speed
-			'Not edible. Probably.'
+			Ваши размещённые стражи атакуют в 2 раза быстрее на 2 секунды
+			100% к увеличению скорости размещения стражей
+			'Несъедобно. Возможно...'
 			'''
 	}
 
 	SeaglassLens: {
-		DisplayName: Seaglass Lens
-		Tooltip: Your minions and sentries occasionally critically strike
+		DisplayName: Линза из морского стекла
+		Tooltip: Ваши миньоны и стражи периодически наносят критический урон
 	}
 
 	SeaglassRing: {
-		DisplayName: Seaglass Ring
+		DisplayName: Кольцо из морского стекла
 		Tooltip:
 			'''
-			+30 maximum {{barrier}}
-			{{Barrier}} recharge starts slightly faster
-			'The battering waves have not diminished its shine'
+			+30 к заряду на {{барьер}}
+			{{Барьер}} восстанавливается чуть быстрее
+			'Бушующие волны не смогли испортить его сияния'
 			'''
 	}
 
 	BrainSpawner: {
-		DisplayName: Thinker Test
-		Tooltip: Teleports you and spawns the thinker
+		DisplayName: Тест мыслителя
+		Tooltip: Телепортирует вас и призывает мыслителя
 	}
 
 	BreachCannon: {
-		DisplayName: Breach Cannon
+		DisplayName: Противоматериальная пушка
 		Tooltip:
 			'''
-			Summons a sentry that shoots a laser towards the cursor 
-			Colliding lasers from multiple cannons can combine
+			Призывает турель которая стреляет лазером в сторону курсора
+			Пересекающиеся лазеры с разных пушек могут соединяться
 			'''
 	}
 
 	BreacherChest: {
-		DisplayName: Breacher Chestplate
-		Tooltip: 10% increased ranged damage
+		DisplayName: Нагрудник штурмовика
+		Tooltip: Увеличивает стрелковый урон на 10%
 	}
 
 	BreacherHead: {
-		DisplayName: Breacher Visor
-		Tooltip: 15% increased ranged critical strike damage
+		DisplayName: Визор штурмовика
+		Tooltip: Увеличивает урон критического стрелкового удара на 15%
 	}
 
 	BreacherLegs: {
-		DisplayName: Breacher Leggings
-		Tooltip: up to 20% ranged critical strike damage based on speed
+		DisplayName: Поножи штурмовика
+		Tooltip: Увеличивает урон критического стрелкового удара до 20% в зависимости от скорости игрока
 	}
 
 	FlareBreacher: {
-		DisplayName: Flare Breacher
-		Tooltip: Fires explosive flares that embed in enemies, blasting shrapnel through and behind them
+		DisplayName: Пробивающий пистолет
+		Tooltip: Стреляет взрывающимися, начинёнными шрапнелью сигнальными ракетами что врезаются во врагов
 	}
 
 	ReactivePlating: {
-		DisplayName: Reactive Plating
+		DisplayName: Активное покрытие
 		Tooltip:
 			'''
-			Gain brief damage resistance after taking several hits
-			'The shielding activates, but only after... repeated triggers.'
+			Предоставляет короткое сопротивление урону после его получения
+			'Защитный экран активируется, но только после ... повторяющихся переключений.'
 			'''
 	}
 
 	ScrappodItem: {
-		DisplayName: Scrap Pod
-		Tooltip: Shatters into scrapnel after reaching your cursor
+		DisplayName: Ячейка с металлоломом
+		Tooltip: Разрывается шрапнелью по достижению курсоса
 	}
 
 	Scrapshot: {
-		DisplayName: Scrapshot
+		DisplayName: Шлакомёт
 		Tooltip:
 			'''
-			<right> to hook your enemies and pull closer
-			Fire while hooked to reduce spread and go flying
+			<right> чтобы зацепиться за врага и приблизиться к нему
+			Стреляйте во время зацепления чтобы уменьшить разброс пуль и начать летать
 			'''
 	}
 
 	SupplyBeacon: {
-		DisplayName: Supply Beacon
+		DisplayName: Маяк снабжения
 		Tooltip:
 			'''
-			Taking over 50 damage summons a supply drop 
-			Stand near the supply drop to gain {{BUFF:SupplyBeaconDefense, {{BUFF:SupplyBeaconHeal}}, or {{BUFF:SupplyBeaconDamage}} 
-			10 second cooldown
+			Получение больше 50 урона вызовет сброс продовольствия
+			Встаньте рядом с продовольствием чтобы получить {{BUFF:SupplyBeaconDefense, {{BUFF:SupplyBeaconHeal}}, или {{BUFF:SupplyBeaconDamage}} 
+			10 секунд перезарядки
 			'''
 	}
 
 	PotionForest: {
-		DisplayName: Forest Tonic
-		Tooltip: Provides regeneration and immunity to poison
+		DisplayName: Лесной тоник
+		Tooltip: Увеличивает регенерацию здоровья и даёт иммунитет к яду
 	}
 
 	ArchaeologistsWhip: {
-		DisplayName: Archaeologist's Whip
+		DisplayName: Хлыст археолога
 		Tooltip:
 			'''
-			Strike enemies to make them drop treasure 
-			Collect treasure to empower your minions
+			Ударяйте врагов чтобы получать с них сокровища 
+			Собирайте сокровища чтобы усилить ваших миньонов
 			'''
 	}
 
 	AWhip_BlueGem: {
-		DisplayName: Treasure
-		Tooltip: You shouldn't see this
+		DisplayName: Сокровище
+		Tooltip: Вы не должны это видеть
 	}
 
 	AWhip_Cloud: {
-		DisplayName: Treasure
-		Tooltip: You shouldn't see this
+		DisplayName: Сокровище
+		Tooltip: Вы не должны это видеть
 	}
 
 	AWhip_Coin: {
-		DisplayName: Treasure
-		Tooltip: You shouldn't see this
+		DisplayName: Сокровище
+		Tooltip: Вы не должны это видеть
 	}
 
 	AWhip_GreenGem: {
-		DisplayName: Treasure
-		Tooltip: You shouldn't see this
+		DisplayName: Сокровище
+		Tooltip: Вы не должны это видеть
 	}
 
 	AWhip_Necklace: {
-		DisplayName: Treasure
-		Tooltip: You shouldn't see this
+		DisplayName: Сокровище
+		Tooltip: Вы не должны это видеть
 	}
 
 	AWhip_RedGem: {
-		DisplayName: Treasure
-		Tooltip: You shouldn't see this
+		DisplayName: Сокровище
+		Tooltip: Вы не должны это видеть
 	}
 
 	AztecDeathSaxophone: {
-		DisplayName: Death Saxophone
+		DisplayName: Саксофон смерти
 		Tooltip:
 			'''
-			Take damage and kill foes with other weapons to charge the saxophone
-			Once charged, use it to unleash a high-damage death roar
+			Получайте урон и убивайте врагов другим оружием чтобы зарядить саксофон
+			После зарядки, используйте, чтобы издать саксофоном мощный рёв
 			'''
 	}
 
 	DesertArtifact1Item: {
-		DisplayName: Ancient Fossil
-		Tooltip: Would fetch a nice price!
+		DisplayName: Древнее ископаемое
+		Tooltip: Должно неплохо стоить!
 	}
 
 	DesertArtifact2Item: {
-		DisplayName: Ancient Fossil
-		Tooltip: Would fetch a nice price!
+		DisplayName: Древнее ископаемое
+		Tooltip: Должно неплохо стоить!
 	}
 
 	DesertArtifact3Item: {
-		DisplayName: Ancient Fossil
-		Tooltip: Would fetch a nice price!
+		DisplayName: Древнее ископаемое
+		Tooltip: Должно неплохо стоить!
 	}
 
 	DesertArtifact4Item: {
-		DisplayName: Ancient Fossil
-		Tooltip: Would fetch a nice price!
+		DisplayName: Древнее ископаемое
+		Tooltip: Должно неплохо стоить!
 	}
 
 	DesertArtifact5Item: {
-		DisplayName: Ancient Fossil
-		Tooltip: Would fetch a nice price!
+		DisplayName: Древнее ископаемое
+		Tooltip: Должно неплохо стоить!
 	}
 
 	DesertArtifact6Item: {
-		DisplayName: Ancient Fossil
-		Tooltip: Would fetch a nice price!
+		DisplayName: Древнее ископаемое
+		Tooltip: Должно неплохо стоить!
 	}
 
 	DesertArtifact7Item: {
-		DisplayName: Ancient Fossil
-		Tooltip: Would fetch a nice price!
+		DisplayName: Древнее ископаемое
+		Tooltip: Должно неплохо стоить!
 	}
 
 	ExoticGeodeArtifactItem: {
-		DisplayName: Exotic Geode
+		DisplayName: Экзотическая жеода
 		Tooltip:
 			'''
-			'Incredibly shiny'
-			An Extractinator might be able to break it apart...
+			'Невероятно сверкающая'
+			Обогатитель сможет её размолотить...
 			'''
 	}
 
 	PerfectlyGenericArtifactItem: {
-		DisplayName: Perfectly Generic Object
-		Tooltip: Alchemizes a Perfectly Generic Pet
+		DisplayName: Совершенно обычный предмет
+		Tooltip: Создаёт совершенно обычного питомца
 	}
 
 	PirateChestArtifactItem: {
-		DisplayName: Pirate Chest
+		DisplayName: Пиратский ларец
 		Tooltip:
 			'''
-			<right> to open
-			'Sought after for centuries'
+			<right> чтобы открыть
+			'Искался веками'
 			'''
 	}
 
 	RainTotemArtifactItem: {
-		DisplayName: Rain Totem
-		Tooltip: Summons or banishes a great storm
+		DisplayName: Тотем дождя
+		Tooltip: Призывает или прогоняет великий шторм
 	}
 
 	WarriorKingsCrown: {
-		DisplayName: Warrior King's Crown
+		DisplayName: Корона Короля воинов
 		Tooltip:
 			'''
-			All summon slots convert to +2% summoning critical strike chance per slot
-			All sentry slots convert to +30% summoning damage per slot
-			Summoning damage increased by 40%
-			Combat mount cooldowns reduced by 30%
+			Все слоты для миньонов превращаются в +2% к шансу критического удара призывателя за слот
+			Все слоты для стражей превращаются в +30% к урону призывателя за слот
+			Увеличивает урон призывателя на 40%
+			Перезарядка боевых ездовых питомцев уменьшается на 30%
 			'''
 	}
 
 	WindTotemArtifactItem: {
-		DisplayName: Wind Totem
-		Tooltip: Summons or banishes a great wind
+		DisplayName: Тотем ветра
+		Tooltip: Призывает или прогоняет великий ветер
 	}
 
 	BearPoker: {
-		DisplayName: Bear Poker
+		DisplayName: Дониматель
 		Tooltip:
 			'''
-			This needle is sharp enough to penetrate a thinker's cocoon
-			This is a terrible idea
+			Эта игла достаточно острая, чтобы пробить кокон мыслителя
+			это ужасная идея
 			'''
 	}
 
 	BearPokerEndless: {
-		DisplayName: Gilded Bear Poker
+		DisplayName: Позолоченный дониматель
 		Tooltip:
 			'''
-			This needle is sharp enough to penetrate a thinker's cocoon
-			This is a terrible idea
-			Infinite uses
+			Эта игла достаточно острая, чтобы пробить кокон мыслителя
+			это ужасная идея
+			Не расходуется
 			'''
 	}
 
 	Lobotomizer: {
-		DisplayName: Lobotomizer
+		DisplayName: Лобомотизёр
 		Tooltip:
 			'''
-			Right click to throw a hallucinatory spear
-			Attacks faster and inflicts {{BUFF:Psychosis}} while hallucinating
-			Has longer reach and inflicts {{BUFF:Neurosis}} while not hallucinating
+			Лобомотомизёр
+			Быстро атакует и накладывает {{BUFF:Psychosis}} во время галлюцинаций
+			Атакует дальше и накладывает {{BUFF:Neurosis}} в остальное время
 			'''
 	}
 
 	MindbreakerPickaxe: {
-		DisplayName: Mindbreaker Pickaxe
-		Tooltip: Can mine gray matter
+		DisplayName: Мозгокоп
+		Tooltip: Может вскопать серое вещество
 	}
 
 	MindCloak: {
-		DisplayName: Cloak of the Mind
-		Tooltip: Increases to maximum mana also apply to maximum {{barrier}}
+		DisplayName: Мантия разума
+		Tooltip: Увеличения максимальной маны также увеличивают {{барьер}}
 	}
 
 	MindCrusher: {
-		DisplayName: Mind crusher
+		DisplayName: Мозголом
 		Tooltip:
 			'''
-			Click and hold to create a growing circle
-			Release to crush all enemies inside the circle
-			Enemies with defense take 2 additional damage per defense
-			Inflicts 5 stacks of {{BUFF:Neurosis}}
+			Нажмите и удерживайте чтобы создать увеличивающийся круг
+			Отпустите чтобы уничтожить всех врагов в круге
+			Враги с защитой получат дополнительные 2 урона за очко защиты
+			Накладывает {{BUFF:Neurosis}} 5 раз
 			'''
 	}
 
 	MyelinSheath: {
-		DisplayName: Myelin Sheath
+		DisplayName: Миелиновая оболочка
 		Tooltip:
 			'''
-			Swords perform a powerful mind slash after not attacking for 2 seconds
-			The mind slash inflicts 5 stacks of either {{BUFF:Neurosis}} or {{BUFF:Psychosis}}
+			Мечи создают мощный мыслительный разрез после отсутствия атак 2 секунды
+			Мыслительный разрез накладывает {{BUFF:Neurosis}} или {{BUFF:Psychosis}} 5 раз
 			'''
 	}
 
 	PsychoticManabond: {
-		DisplayName: Psychotic Manabond
+		DisplayName: Психотическая мана-связь
 		Tooltip:
 			'''
-			Your minions can store 40 mana
-			Your minions siphon 6 mana per second from you untill full
-			Your minions spend 6 mana per second to emit an aura inflicting {{BUFF:Psychosis}}
+			Выши миньоны могут содержать до 40 маны
+			Выши миньоны потребляют 6 маны в секунду пока не заполнятся
+			Ваши миньоны тратят 6 маны в секунду чтобы создавать ауру с эффектом {{BUFF:Psychosis}}
 			'''
 	}
 
 	ThinkerBossBag: {
-		DisplayName: Treasure Bag (The Thinker)
+		DisplayName: Мешок с сокровищами (Мыслитель)
 		Tooltip: ""
 	}
 
 	DebugModerEnabler: {
-		DisplayName: Debug Mode
+		DisplayName: Режим отладки
 		Tooltip:
 			'''
-			{{Inoculation}} is a keyword
-			{{Barrier}} is too
-			Here is a really long line so that we can test the wrapping logic of the tooltip panels! I hope this is long enough.
+			{{Inoculation}} это ключевое слово
+			{{Барьер}} тоже
+			Вот достаточно длинная строка, чтобы протестировать конвертацию внутри подсказок. Надеюсь, достаточно длинная!
 			{{BUFF:OnFire}} {{BUFF:PlexusChaliceBuff}} {{BUFF:BarbedKnifeBleed}}
 			'''
 	}
 
 	DebugStick: {
-		DisplayName: Debug Stick
-		Tooltip: Has whatever effects are needed
+		DisplayName: Палка отладки
+		Tooltip: Обладает нужными ей эффектами
 	}
 
 	DebugStick2: {
-		DisplayName: Debug Stick 2
-		Tooltip: Has whatever effects are needed
+		DisplayName: Палка отладки 2
+		Tooltip: Обладает нужными ей эффектами
 	}
 
 	DefiledAnkh: {
 		Tooltip:
 			'''
-			Your {{Barrier}} protects against 25% less damage
+			Ваш {{барьер}} protects against 25% less damage
 			+100% {{Inoculation}} and immunity to most debuffs while {{Barrier}} is active
 			+40 maximum {{Barrier}}
 			'''
-		DisplayName: Defiled Ankh
+		DisplayName: Осквернённый амулет Анха
 	}
 
 	Sandscript: {
